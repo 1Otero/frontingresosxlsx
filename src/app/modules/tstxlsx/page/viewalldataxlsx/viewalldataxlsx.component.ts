@@ -68,6 +68,7 @@ export class ViewalldataxlsxComponent{
     //this.spinnerloadingService.isViewSpinner(true)
     this.userService.getAllUserByTokenEvent(meTokenEvent)
     .subscribe((e) => {
+     console.log(e)
      if(e && e != null){
       this.changeNeedToken(e.needTokenAssistant)
       this.sendedInfo= {rowsInfo: e.listUsersByTokenEvent}
