@@ -1,0 +1,11 @@
+<div>
+ <app-upfile (meTask)="sendInfoData($event)" (viewInfo)="viewExistInfo($event)" (meNeedToken)="updateNeedToken($event)" ></app-upfile>
+ <app-viewalldataxlsx  [mesendedtst]="dataInfo" [existInfoAssistant]="existInfo" (needToken)="updateNeedToken($event)"></app-viewalldataxlsx>
+ <!-- <p>*Se debe tener en cuenta que cada que se cargue la base de datos de excel se debe enviar un correo con un token ramdon de 5 digitos a cada uno de los correos</p>
+ <p>*Se debe poder poner una opcion de salida</p>
+ <p>*Se debe agregar una vista para poder manejar los ingresos, valida usuario que se subio. por correo y token o solo correo, cambia de color a ingresado(verde). no ingresado es(gris).
+    o status negativo o pendiente pago en(rojo), y cuando se da salida a un usuario queda en (amarillo) por si quiere volver a ingresar en caso de no existir puede agregarlo pero muestra 
+    mensaje no existe, si se agrega un usuario debe agregarse en la tabla pero debe haber un campo que diga agregado fuera de excel</p>
+ <p>*Ver la posibilidad de poner la opcion para Descargar excel de informacion de todo lo que se realizo en el app respecto a los usuarios y ingresos</p>    -->
+ <app-view-change-status-assistant [needToken]="needToken"></app-view-change-status-assistant>
+</div>

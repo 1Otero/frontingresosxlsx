@@ -1,0 +1,35 @@
+<div class="fixed inset-0 bg-black/50 z-50">
+   <div class="fixed top-0 left-0 right-0 bg-white h-full lg:h-96 m-14 p-7">
+       <div class="text-center" *ngIf="!viewSecondQuestion">
+        <h2>{{meTitle}}</h2>
+        <div class="lg:flex lg:flex-wrap lg:items-center lg:justify-center p-11 lg:p-14">
+         <div *ngFor="let o of meOptions" class="lg:w-1/2">
+          <div class="p-5 lg:p-1">
+           <h2 (click)="selectedOpcion(o.value)">{{o.name}}</h2>
+           <p>{{o.description}}</p>
+          </div>
+         </div>
+        </div>
+        <!-- <div class="lg:mt-3">
+           <button class="block w-full text-lg text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-red-500 dark:text-red-400 focus:outline-none dark:bg-red-700 dark:border-gray-600 dark:placeholder-gray-400" (click)="closeMeComponentDialog('cierra')">Close</button>
+        </div> -->
+       </div>
+       <div class="text-center" *ngIf="viewSecondQuestion">
+         <h2>{{meTitle}}</h2>
+         <div class="lg:flex lg:flex-wrap lg:items-center lg:justify-center p-11 lg:p-14">
+          <div *ngFor="let o of meOptions" class="lg:w-1/2">
+           <div class="p-5 lg:p-1">
+            <h2 (click)="selectedOpcion(o.value)">{{o.name}}</h2>
+            <p>{{o.description}}</p>
+           </div>
+          </div>
+         </div>
+         <!-- <div class="lg:mt-3">
+            <button class="block w-full text-lg text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-red-500 dark:text-red-400 focus:outline-none dark:bg-red-700 dark:border-gray-600 dark:placeholder-gray-400" (click)="closeMeComponentDialog('cierra')">Close</button>
+         </div> -->
+       </div>
+       <div>
+         <button class="block w-full text-lg text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-red-500 dark:text-red-400 focus:outline-none dark:bg-red-700 dark:border-gray-600 dark:placeholder-gray-400" (click)="closeMeComponentDialog('cierra')">Close</button>
+      </div>
+   </div>
+</div>

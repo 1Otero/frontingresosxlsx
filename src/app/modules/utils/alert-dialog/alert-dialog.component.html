@@ -1,0 +1,10 @@
+<div class="fixed w-full">
+ <div *ngIf="isView && bodyAlert != null" class="bg-{{bodyAlert.colortype}} p-3 text-center text-white font-black text-2xl pb-11">
+  <h2>
+    {{bodyAlert.name}}
+  </h2>
+  <p>
+    {{bodyAlert.description}}
+  </p>
+ </div>       
+</div>
